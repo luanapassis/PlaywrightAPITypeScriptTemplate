@@ -1,0 +1,22 @@
+{
+  "name": "templatewebplaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:dev": "cross-env TEST_ENV=dev npx playwright test",
+    "test:qa": "cross-env TEST_ENV=qa npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "mssql": "^11.0.1"
+  }
+}

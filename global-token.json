@@ -1,0 +1,10 @@
+{
+  "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJfSmNjTG9sNzVAcWEuY29tLmJyIiwicGFzc3dvcmQiOiJ0ZXN0ZSIsImlhdCI6MTc0NjY1NzQxMiwiZXhwIjoxNzQ2NjU4MDEyfQ.8V3m0sbFeQ0aod4AOW93MyG8ky4zHR6EEgBCtV2Qwik",
+  "user": {
+    "nome": "Fulano da Silva",
+    "email": "user_JccLol75@qa.com.br",
+    "password": "teste",
+    "administrador": "true",
+    "_id": "wRdMpUG2SzKXFYuR"
+  }
+}
