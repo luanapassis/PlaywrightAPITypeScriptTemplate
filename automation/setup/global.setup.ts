@@ -1,4 +1,4 @@
-import { request } from '@playwright/test';
+import { FullConfig, request } from '@playwright/test';
 import fs from 'fs';
 import { Utils } from '../utils/utils';
 import { UserPayload } from '../payloads/users/UsersPayload';
@@ -6,10 +6,13 @@ import { PostUserRequest } from '../requests/users/PostUserRequest';
 import { LoginPayload } from '../payloads/login/loginPayload';
 import { LoginRequest } from '../requests/login/LoginRequest';
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
-async function globalSetup() {
+async function globalSetup(config: FullConfig) {
+  const baseURL = config.projects[0]?.use?.baseURL || '';
   const apiContext = await request.newContext({
-    baseURL: 'https://serverest.dev',
+    baseURL,
+    ignoreHTTPSErrors: true,
   });
 
   console.log('🚀 Running global setup...');

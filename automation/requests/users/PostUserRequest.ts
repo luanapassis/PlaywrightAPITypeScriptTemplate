@@ -1,16 +1,8 @@
 import { APIRequestContext, APIResponse } from '@playwright/test';
-import { LoggerUtils } from '../../utils/LoggersUtils';
+import { RequestBase } from '../../bases/RequestBase';
 
 export class PostUserRequest {
   static async createUser(apiContext: APIRequestContext, data: any): Promise<APIResponse> {
-    LoggerUtils.logPayloadRequest('POST /usuarios', data);
-
-    const response = await apiContext.post('/usuarios', {
-      data,
-    });
-
-    await LoggerUtils.logResponse('POST /usuarios', response);
-
-    return response;
+    return await RequestBase.post(apiContext, '/usuarios', data);
   }
 }

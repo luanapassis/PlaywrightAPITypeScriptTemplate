@@ -41,9 +41,6 @@ test('POST /pet - Create new pet successfully', async () => {
   expect(responseBody.tags).toHaveLength(2);
   expect(responseBody.photoUrls).toHaveLength(2);
 
-  
-
-  console.log('Pet created:', JSON.stringify(responseBody, null, 2));
 });
 
 test('POST /pet - Create new pet successfully with assert all failling', async () => {

@@ -5,7 +5,7 @@ test('Get invalid user by id', async () => {
   const apiContext = await request.newContext({
   });
 
-  const userId = '0uxuPY0cbmQhpEz1';
+  const userId = '999uPY0cbmQhpEz1';
 
   const response = await GetUserByIdRequest.getUserById(apiContext, userId);
   const responseBody = await response.json();
